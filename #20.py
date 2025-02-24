@@ -1,7 +1,19 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        if len(s) == 1:
+        myStack = []
+        myDict = {
+            "}": "{",
+            ")": "(",
+            "]": "["
+        }
+        if not s or len(s) == 1:
             return False
-        if s.count('(') == s.count(')') and s.count('[') == s.count(']') and s.count('{') == s.count('}'):
-            return True
-        return False
+        for ch in s:
+            if ch == '{' or ch == '(' or ch == '[':
+                myStack.append(ch)
+            else: 
+                if myStack:
+                    if myDict[ch] == myStack.pop():
+                        continue
+                return False
+        return True if not myStack else False
