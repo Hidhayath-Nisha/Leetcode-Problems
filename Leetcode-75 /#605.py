@@ -1,3 +1,4 @@
+# -- Brute Force --
 class Solution:
     def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
         l = len(flowerbed)
