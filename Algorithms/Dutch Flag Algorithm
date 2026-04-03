@@ -1,0 +1,11 @@
+Basically, a partition algorithm, instead of blindly thinking of sorthing, when speration or partition or region kinda problem comes up think about this THREE POINTERS algorithm. Basically 3 regions (mid part automatically handled)
+
+Concept is: 
+-> 0  to low as one region
+-> low to mid as one region
+-> mid to high as one region, 
+and you gonna scan with the mid pointer keeping all the array elements as unknown to put the current elemen in the proper region.
+
+Keynote to mind:
+1. When u put the low value and move the pointer u need to move mid, cause technically the 0 to low to mid region is already sorted and obviously mid here is working as a pointer. 
+2. And when u push high regoin value that is swap with mid, u are not moving mid here cause it's a new value now you got with the position of high pointer. 
